@@ -17,9 +17,11 @@
 <h2> Overshooting </h2>
 <p> Soon after the tug-of-war problem we moved onto a larger prototype. With the acid or alkaline had been introduced in our system, the logic indicated that the solution should be close to neutral (pH 7). However, what we found out was that it would typically overshoot to the opposite side (so when we introduced acid, the pH would jump from pH 6 to pH 9 and when we introduced alkaline, the pH would jump from about pH 9 to pH 5, potentially killing our vaccine). As we had just made adjustments for the ToW problem, we had assumed we were responsible for introducing the error and immediately sought to adjust the 'grace period', but to no avail, the system would always overshoot the desired pH. </p>
 
+<p> It wasn't until one of the EEE members had pointed out the simple flaw that we were possibly introducing too much acid/alkaline at a given time in our system. A simple problem that could be resolved with minutes had set us back 2 days. With this in mind, we sought to adjust the functionality of the motor. The motor logic indicated that we could not control the power of the motor - it would simply be on [1] or off [0], and so we had to introduce intermittent delays in turning it on and off to simulate the 'power' of a motor. This eventually solved our problem.</p>
+
 <h2> Summary </h2>
 <p> Real world scenarios that require interdisciplinary teamwork can be very confusing and require observation and good communication between each discipline. It also often pays not to jump to the first conclusion and to highlight potential problems and short-comings in all aspects of a system. In very time-constrained situations, it also pays to measure twice and cut once. </p>
 
-<p> It wasn't until one of the EEE members had pointed out the simple flaw that we were possibly introducing too much acid/alkaline at a given time in our system. A simple problem that could be resolved with minutes had set us back 2 days. With this in mind, we sought to adjust the functionality of the motor. The motor logic indicated that we could not control the power of the motor - it would simply be on [1] or off [0], and so we had to introduce intermittent delays in turning it on and off to simulate the 'power' of a motor. This eventually solved our problem.</p>
+
 
 
