@@ -1,2 +1,10 @@
-# PH-Balancing
-A short summary of the obstacles faced when developing a Ph-Balancing Component for a Vaccine Reactor
+# PH-Balancing Component
+<p> A short summary of the development of a Ph-balancing component of a vaccine reactor developed alongside the EEE Cohort of UCL. The project was developed using C and the Arduino IDE to control the Microcontroller, along with the Processing 3 Graphics Library for User Interface. This document will not contain any code, but instead highlights the problems faced when developing the Ph-balancing component. </p>
+
+<h2> Programmer Tunnel-Vision </h2>
+<p> Often when we work as Software Developers, the kind of problems we encounter are purely virtual - one would just often need to observe the results and debug their code to locate their problem. However, in an interdisciplinary project where there can be considered many phases and translations to a real-world output, things tend to get more complex. It often pays to be extremely observant and analytical as erroneous results can stem from many aspects. It could potentially be a programming error or a logic in the programming (which we know how to handle) but now problems can stem from virtual to physical translation or it could potentially be a physical error. The document will outline the problems that we ran into. </p>
+
+<h2> Quick to React </h2>
+<p> The logic on paper was straightforward - if the solution is too acidic, drip alkaline into the solution through the alkaline motor, and if it was too alkaline, we would drip acid via the acid motor. However, what we found was that the Ph was not homogenous - our observation was that frequently there would be a 'spike' in the Ph reading very briefly which would set off the motors when unecessary. This very much could be an erroneuous reading, or that we did not give enough time for the solutions to mix and so the program would need to be adjusted to ignore this small spike. </p>
+
+<p> As our Software subdivision immediately requested the EEE subdivision to install more Ph sensors so we could take multiple readings to determine an average, the EEE subdivision had to remind us that we were not made of money and that we had to work with only one Ph sensor. And so the solution (the answer, not the liquid we are neutralising) was to split the usual reading of 2 seconds to 4 readings every 0.5 seconds and determine an average. With this logic implemented, the program was less prone to these spikes.</p>
